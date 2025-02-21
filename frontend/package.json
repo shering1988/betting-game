@@ -1,0 +1,54 @@
+{
+  "name": "material-cra-styled-components-ts",
+  "version": "5.0.0",
+  "private": true,
+  "dependencies": {
+    "@mui/icons-material": "^5.14.3",
+    "@mui/lab": "latest",
+    "@mui/material": "latest",
+    "@mui/styled-engine-sc": "latest",
+    "@mui/x-charts": "^7.7.0",
+    "@mui/x-date-pickers": "^6.12.1",
+    "ajv": "^8.12.0",
+    "ajv-errors": "^3.0.0",
+    "dayjs": "^1.11.9",
+    "react": "latest",
+    "react-countup": "^6.4.2",
+    "react-dom": "latest",
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "latest",
+    "react-scripts": "^5.0.1",
+    "recharts": "^2.12.7",
+    "styled-components": "latest"
+  },
+  "scripts": {
+    "tsc": "./node_modules/.bin/tsc",
+    "start": "craco start",
+    "build": "npm run eslint && craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "eslint": "eslint --ext .ts,.tsx --max-warnings 0 .",
+    "eslint-fix": "eslint --fix --ext .ts,.tsx --max-warnings 0 ."
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@craco/craco": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/styled-components": "latest",
+    "craco-alias": "^3.0.1",
+    "typescript": "latest"
+  }
+}

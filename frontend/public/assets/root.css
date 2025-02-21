@@ -1,0 +1,11 @@
+html {
+    background-color: #001010;
+}
+
+input {
+    box-shadow: 0 0 0 30px black inset !important;
+}
+
+.MuiPopper-root {
+    z-index: 9999999 !important;
+}

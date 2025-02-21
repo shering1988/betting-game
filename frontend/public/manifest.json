@@ -1,0 +1,15 @@
+{
+  "short_name": "Betting Game",
+  "name": "Betting Game",
+  "icons": [
+    {
+      "src": "assets/android-chrome-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "theme_color": "#009687",
+  "background_color": "#282828",
+  "display": "standalone"
+}

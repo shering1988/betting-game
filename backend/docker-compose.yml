@@ -1,0 +1,38 @@
+services:
+  server:
+    container_name: betting-game-nginx
+    image: nginx
+    restart: always
+    ports:
+      - '3169:443'
+    volumes:
+      - './:/var/www/html'
+      - './docker/local/betting-game.conf:/etc/nginx/nginx.conf'
+      - './docker/local/ssl/dev.localhost.crt:/etc/ssl/certs/localhost.crt'
+      - './docker/local/ssl/dev.localhost.key:/etc/ssl/private/localhost.key'
+    links:
+      - php
+  php:
+    container_name: betting-game-php
+    restart: always
+    build:
+      context: .
+      dockerfile: ./docker/common/php-extensions
+    volumes:
+      - './:/var/www/html'
+      - './docker/common/php.ini:/usr/local/etc/php/php.ini'
+    links:
+      - database
+  database:
+    container_name: betting-game-mysql
+    image: mariadb
+    restart: always
+    ports:
+      - '3168:3306'
+    expose:
+      - '3168'
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: betting_game
+    volumes:
+      - './data:/var/lib/mysql'

@@ -1,0 +1,13 @@
+framework:
+    mailer:
+        dsn: '%env(MAILER_DSN)%'
+        headers:
+            From: 'Tippspiel <sven.hering1988@googlemail.com>'
+        envelope:
+            sender: 'sven.hering1988@googlemail.com'
+
+when@dev:
+    framework:
+        mailer:
+            envelope:
+                recipients: ['sven.hering1988@googlemail.com']
