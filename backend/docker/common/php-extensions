@@ -1,0 +1,6 @@
+FROM php:8-fpm
+RUN apt-get update && apt-get -y install libjpeg-dev libpng-dev zlib1g-dev zip libwebp-dev libicu-dev
+RUN docker-php-ext-configure gd --with-jpeg --with-webp && docker-php-ext-install gd && docker-php-ext-enable gd
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+RUN docker-php-ext-configure intl
+RUN docker-php-ext-install intl
